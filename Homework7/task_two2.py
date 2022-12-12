@@ -1,10 +1,10 @@
-def is_right_angle_triangle(a, b, c):
-    triangle_some = sorted([a, b, c])
+def is_right_angle_triangle(a_, b_, c_):
+    a, b, c = sorted([a_, b_, c_])
     result = {'result': False, 'description': 'no such triangle exists'}
 
-    if triangle_some[0] + triangle_some[1] <= triangle_some[2]:
+    if a + b <= c:
         True
-    elif triangle_some[0]**2 + triangle_some[1]**2 == triangle_some[2]**2:
+    elif a**2 + b**2 == c**2:
         result['result'] = True
         result['description'] = 'the triangle is right-angled'
     else:
