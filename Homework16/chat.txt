@@ -1,0 +1,35 @@
+
+1. Вывести список участников (в том формате, в котором они указаны в файле) вебинара в алфавитном порядке
+
+ubuntu@ubuntu2004:/tmp$ cat /tmp/chat | grep 'AM\|PM' | cut -d ' ' -f1,2 | sort | uniq
+Alena Sauchanka
+Aliaksandr Kazlouski
+Aliaksandr Khviasiuk
+Darya Karpeichyk
+Kseniya Sobol
+Mikhail Nasevich
+Sviatlana Artsiomava
+Tatsiana Iuchyk
+Vikentsi Lapa
+Viktar Pazniak
+Viktoryia Chytaya
+ubuntu@ubuntu2004:/tmp$ 
+
+2. Вывести число участников вебинара
+ubuntu@ubuntu2004:/tmp$ cat /tmp/chat | grep 'AM\|PM' | cut -d ' ' -f1,2 | sort|uniq|wc -l
+11
+ubuntu@ubuntu2004:/tmp$ 
+
+3. Вывести все вопросы участников вебинара
+ubuntu@ubuntu2004:/tmp$ cat /tmp/chat | grep '?'|paste
+33?
+10?
+инициализация?
+вводить только эти данные?
+а в чем различие внешних и внутренних команд?
+из одной в другую директорию может?
+a??
+a??
+
+
+
