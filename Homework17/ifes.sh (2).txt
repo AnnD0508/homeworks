@@ -1,0 +1,18 @@
+#/bin/bash
+
+if (( $1 > 0 ))
+then
+echo "{$1}положительное"
+else
+echo "{$1}отрицательное"
+fi
+
+mydir=/home/ubuntu/homework/
+if [ -d $mydir ]
+then
+echo "The $mydir directory exists"
+cd $mydir
+ls
+else
+echo "The $mydir directory does not exist"
+fi
